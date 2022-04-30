@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container" style="text-align:center">
+    <div class="row" >
+        <div class="col-6">
+        <form method="post"  >
+            {% csrf_token %}
+        <div class="form_group">
+            <input style="border:2px solid green;" class="form-control" type="text" name="task" placeholder="Task name"><br>
+        </div>
+
+        <div class="form_group">
+            <input style="border:2px solid green;" class="form-control" type="text" name="priority" placeholder="Enter your priority"><br>
+        </div>
+        <div class="form_group">
+            <input style="border:2px solid green;" class="form-control" type="date" name="date" ><br>
+        </div>
+            <button style="border:2px solid green;" class="btn btn-danger" type="submit">Enter</button>
+        </form>
+
+        </div>
+        <div class="col-6">
+            {% for i in task %}
+            <div class="card">
+                <div class="card-body">
+                    <b class="card-title">{{ i.name }}</b>
+                    <p>{{ i.priority }}</p>
+                    <p>{{ i.date }}</p>
+                    <a class="btn btn-primary" href="{% url 'classdelete' i.id %} "> Delete</a>
+                    <a class="btn btn-primary" href="{% url 'classupdate' i.id %} "> Update</a>
+
+                </div>
+                <br>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+.name{
+background-color:#2E4053;
+ color:#AAB7B8 ;
+padding:30px;
+margin-bottom:10px;
+}
+.title-text{
+top:15%;
+left:45%;
+position:absolute;
+transform:transform;
+text-decoration:overline underline;
+}
+.form-control{
+ color:gray;background-color:#5499C7;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body{
+background-color:#93ADBE;
+}
+.card-body{
+background-color:#85C1E9
+}
+.card{
+background-color:#93ADBE;
+}
